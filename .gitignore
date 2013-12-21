@@ -1,0 +1,23 @@
+# Unneeded Unity folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uilds/
+/[Bb]uilds_Dev/
+
+# Visual Studio files
+*.sln
+*.csproj
+*.pidb
+*.userprefs
+*.suo
+*.user
+*.sln.docstates
+*.tmproj
+*.unityproj
+
+#OS Junk
+Thumbs.db
+.DS_Store*
+ehthumbs.db
+Icon7
