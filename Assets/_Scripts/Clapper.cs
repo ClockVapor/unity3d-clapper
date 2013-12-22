@@ -22,12 +22,13 @@ using System.Collections;
 
 public class Clapper : MonoBehaviour
 {
-    public string[] ClapGroupingMethods;
+    public string ClapGroupMethod;
     public string ClapHeardMethod;
     public float AnalyzeInterval = 0.1f;
     public float ClapVolumeThreshold = 0.1f;
     public float ClapMinInterval = 0.2f;
     public float ClapGroupingTimeout = 0.5f;
+
     private float lastClap = 0;
     private int clapGroupSize = 0;
 
@@ -94,11 +95,9 @@ public class Clapper : MonoBehaviour
 #if UNITY_EDITOR
             print("Grouping timeout with " + clapGroupSize + " clap(s).");
 #endif
-            if (ClapGroupingMethods != null &&
-                ClapGroupingMethods.Length >= clapGroupSize &&
-                !string.IsNullOrEmpty(ClapGroupingMethods[clapGroupSize - 1]))
+            if (!string.IsNullOrEmpty(ClapGroupMethod))
             {
-                SendMessage(ClapGroupingMethods[clapGroupSize - 1]);
+                SendMessage(ClapGroupMethod, clapGroupSize);
             }
         }
 

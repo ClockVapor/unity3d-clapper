@@ -24,8 +24,8 @@ public class MicrophoneListener : MonoBehaviour
 {
     public string MicrophoneName = null;
     public int Frequency = 128;
-
     public int ClipLength = 1;
+
     private AudioClip clip;
     private int clipStart = 0;
     private int oldMicPos = 0;
